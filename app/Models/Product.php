@@ -9,6 +9,9 @@ class Product extends Model
 {
     protected $fillable = [
         'code',
+        'name',
+        'brand',
+        'price',
     ];
 
     protected static function booted(): void
@@ -18,5 +21,15 @@ class Product extends Model
                 $product->code = app(AutomaticCodeGenerator::class)->productCode();
             }
         });
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'price' => 'float',
+        ];
     }
 }

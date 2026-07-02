@@ -13,8 +13,8 @@ use Illuminate\Http\Request;
 
 /**
  * @group Me
- * 
- * This controller manage endpoints related to the authenticated user, 
+ *
+ * This controller manage endpoints related to the authenticated user,
  * that is, "me" as a user who has already logged in
  */
 class MeController extends Controller
